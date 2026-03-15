@@ -1,0 +1,14 @@
+.container { display:flex; flex-direction:column; align-items:center; padding-top:80rpx; min-height:100vh; }
+.merit-display { font-size:48rpx; color:#f5c842; margin-bottom:40rpx; }
+.fish-wrap { position:relative; width:400rpx; height:400rpx; display:flex; align-items:center; justify-content:center; }
+.fish { width:300rpx; height:300rpx; transition:transform 0.08s; }
+.fish-tap { transform:scale(0.9); }
+.float-text { position:absolute; color:#f5c842; font-size:36rpx; animation:floatUp 0.8s ease-out forwards; pointer-events:none; }
+@keyframes floatUp { 0%{opacity:1;transform:translateY(0)} 100%{opacity:0;transform:translateY(-120rpx)} }
+.combo-display { font-size:32rpx; color:#ff6b6b; margin-top:20rpx; }
+.effect { position:absolute; font-size:28rpx; color:#f5c842; }
+.effect-gold { color:#ffd700; font-size:40rpx; }
+.effect-lotus { color:#ff69b4; }
+.effect-ring { color:#ffa500; }
+.bottom-bar { display:flex; gap:40rpx; margin-top:60rpx; }
+.btn { padding:16rpx 48rpx; background:#2d2d5e; border-radius:16rpx; font-size:30rpx; }
