@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="merit-display">功德：{{merit}}</view>
+
+  <view class="fish-wrap" bindtap="onTap">
+    <image
+      class="fish {{tapping ? 'fish-tap' : ''}}"
+      src="/assets/fish_default.png"
+      mode="aspectFit"
+    />
+    <!-- 连击特效层 -->
+    <view wx:if="{{combo >= 100}}" class="effect effect-gold">金光普照</view>
+    <view wx:elif="{{combo >= 50}}" class="effect effect-lotus">莲花绽放</view>
+    <view wx:elif="{{combo >= 10}}" class="effect effect-ring">金色光圈</view>
+  </view>
+
+  <!-- 浮字动画 -->
+  <view wx:for="{{floats}}" wx:key="id"
+    class="float-text" style="left:{{item.x}}rpx;top:{{item.y}}rpx;">
+    功德+1
+  </view>
+
+  <view class="combo-display" wx:if="{{combo > 1}}">连击 x{{combo}}</view>
+
+  <view class="bottom-bar">
+    <view class="btn" bindtap="goRank">排行榜</view>
+    <view class="btn" bindtap="onShare">分享</view>
+  </view>
+</view>
